@@ -7,15 +7,35 @@
     <img src="icons/EDGE-MainLogo-01-cropped.png" alt="The Resting Edge" height="100" width="400">
     <div>
       <h2>Request</h2>
-      <div>
-        <label style="font-weight: bold;">URL</label>
-        <input type="text" id="apiUri" value="https://random.dog/woof.json">
-      </div>
-      <br/>
-      <div>
-        <label style="font-weight: bold;">Method</label>
-        <input type="text" id="methodBox" value="GET"></label>
-      </div>
+      <table>
+        <tr>
+          <td><label style="font-weight: bold;">URL</label></td>
+          <td><input type="text" id="apiUri" value="https://random.dog/woof.json"></td>
+        </tr>
+        <tr>
+          <td><label style="font-weight: bold;">Method</label></td>
+          <td><input type="text" id="methodBox" value="GET"></label></td>
+        </tr>
+        <tr>
+            <td><label style="font-weight: bold;">AuthKey</label></td>
+            <td><input type="text" id="authKeyBox" ></td>
+          </tr>
+          <tr>
+            <td><label style="font-weight: bold;">Token</label></td>
+            <td><input type="text" id="tokenBox" ></label></td>
+          </tr>
+        <tr>
+          <td colspan="2" style="text-align: center"><h2><label>Headers</label></h2></td>
+        </tr>
+        <tr>
+            <td><label style="font-weight: bold;">Content-Type</label></td>
+            <td><input type="text" id="contentTypeBox" value="application/json"></label></td>
+        </tr>
+        <tr>
+            <td><label style="font-weight: bold;">Body</label></td>
+            <td><input type="text" id="bodyBox" ></label></td>
+        </tr>
+      </table>
       <br/>
       <button id="goButton" style="border:1pt solid black; 
       background-color: #1976d2; 

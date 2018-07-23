@@ -4,6 +4,10 @@ body{
 	overflow: hidden;
 }
 
+input{
+	width: 275px;
+}
+
 .title{
 	font-family: Courier New, Courier, monospace;
 	width:240px; 
