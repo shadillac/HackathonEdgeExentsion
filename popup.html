@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <link rel="stylesheet" type="text/css" href="css/styles.css" />
+    <link rel="stylesheet" type="text/css" href="css/style.css" />
   </head>
   <body>
     <img src="icons/EDGE-MainLogo-01-cropped.png" alt="The Resting Edge" height="100" width="400">
@@ -11,15 +11,21 @@
         <label>URL</label>
         <input type="text" id="apiUri" value="https://random.dog/woof.json">
       </div>
+      <br/>
       <div>
         <label>Method</label>
         <input type="text" id="methodBox" value="GET"></label>
       </div>
-      <button id="goButton">Send Request</button>
+      <br/>
+      <button id="goButton" style="border:1pt solid black; 
+      background-color: #1976d2; 
+      color: whitesmoke;
+      font-weight: bold;
+      padding:10pt;">Send Request</button>
     </div>
     <div>
       <h2>Response</h2>
-      <label id="responseLabel">Response...</label>
+      <label id="responseLabel"></label>
     </div>
     <script src="js/popup.js"></script>
   </body>
