@@ -1,12 +1,11 @@
 // get the button by id
 let go = document.getElementById('goButton');
 let responseLabel = document.getElementById('responseLabel');
-let apiURI = document.getElementById('apiUri');
-let methodType = document.getElementById('methodBox'); 
 
 // On the click event of the button go out to a url and do a get.
 go.onclick = function() {
-    //let domain = "https://httpbin.org/get";
+  let apiURI = document.getElementById('apiUri').text;
+  let methodType = document.getElementById('methodBox').text; 
 
   fetch(apiURI, {
     method: methodType,
@@ -18,6 +17,6 @@ go.onclick = function() {
     responseLabel.text = response.text();
   })
   .then(function (text) {
-    responseLabel.text = text;
+    responseLabel.text = text();
   });
 };
