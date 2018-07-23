@@ -1,20 +1,23 @@
 // get the button by id
-let go = document.getElementById('go');
+let go = document.getElementById('goButton');
+let responseLabel = document.getElementById('responseLabel');
+let apiURI = document.getElementById('apiUri');
+let methodType = document.getElementById('methodBox'); 
 
 // On the click event of the button go out to a url and do a get.
 go.onclick = function() {
-    var domain = "https://httpbin.org/get";
+    //let domain = "https://httpbin.org/get";
 
-  fetch(domain, {
-    method: 'GET',
+  fetch(apiURI, {
+    method: methodType,
     headers: {
       'Content-Type': 'application/json'
     },
   })
   .then(function (response) {
-    return response.text();
+    responseLabel.text = response.text();
   })
   .then(function (text) {
-    alert(text);
+    responseLabel.text = text;
   });
 };
