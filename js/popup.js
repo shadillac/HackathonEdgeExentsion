@@ -6,6 +6,7 @@ let responseLabel = document.getElementById('responseLabel');
 go.onclick = function() {
   let apiURI = document.getElementById('apiUri').value;
   let methodType = document.getElementById('methodBox').value; 
+<<<<<<< HEAD
 
   // alert(apiURI);
 
@@ -26,6 +27,9 @@ go.onclick = function() {
   
   // alert("ending");
 
+=======
+alert(apiURI);
+>>>>>>> 5c8da93175a71dab94133b8bf0ede07b9a550047
   fetch(apiURI, {
     method: 'GET',
     headers: {
@@ -33,6 +37,7 @@ go.onclick = function() {
     },
   })
   .then(function (response) {
+<<<<<<< HEAD
     return response.text();
   })
   .then(function (text) {
@@ -42,4 +47,11 @@ go.onclick = function() {
     alert(error);
   });  
 
+=======
+    responseLabel.value = response.text();
+  })
+  .then(function (text) {
+    responseLabel.value = text();
+  });
+>>>>>>> 5c8da93175a71dab94133b8bf0ede07b9a550047
 };

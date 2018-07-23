@@ -8,8 +8,8 @@
     ], 
     "browser_action": {
       "default_icon": {
-        "20": "icons/EDGE-Icon-01.png",
-        "40": "icons/EDGE-Icon-01.png"
+        "20": "icons/EDGE-Icon-02.png",
+        "40": "icons/EDGE-Icon-02.png"
       },
       "default_title": "The Resting Edge",
       "default_popup": "popup.html"
