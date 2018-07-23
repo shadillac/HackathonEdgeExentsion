@@ -4,9 +4,9 @@ let responseLabel = document.getElementById('responseLabel');
 
 // On the click event of the button go out to a url and do a get.
 go.onclick = function() {
-  let apiURI = document.getElementById('apiUri').text;
-  let methodType = document.getElementById('methodBox').text; 
-
+  let apiURI = document.getElementById('apiUri').value;
+  let methodType = document.getElementById('methodBox').value; 
+alert(apiURI);
   fetch(apiURI, {
     method: methodType,
     headers: {
@@ -14,9 +14,9 @@ go.onclick = function() {
     },
   })
   .then(function (response) {
-    responseLabel.text = response.text();
+    responseLabel.value = response.text();
   })
   .then(function (text) {
-    responseLabel.text = text();
+    responseLabel.value = text();
   });
 };
