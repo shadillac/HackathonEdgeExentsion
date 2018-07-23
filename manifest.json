@@ -4,19 +4,18 @@
     "version": "0.2",
     "description": "An Edge Extension to test REST API",
     "permissions": [
-      "*://docs.microsoft.com/*",
       "tabs"
     ], 
     "browser_action": {
       "default_icon": {
-        "20": "images/color-changer20.png",
-        "40": "images/color-changer40.png"
+        "20": "icons/EDGE-Icon-01.png",
+        "40": "icons/EDGE-Icon-01.png"
       },
-      "default_title": "Color Changer",
+      "default_title": "The Resting Edge",
       "default_popup": "popup.html"
     },
     "icons": {
-        "25": "images/color-changer25.png",
-        "48": "images/color-changer48.png"
+        "25": "icons/EDGE-Icon-01.png",
+        "48": "icons/EDGE-Icon-01.png"
       }
   }
