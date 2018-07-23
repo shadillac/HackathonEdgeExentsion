@@ -9,7 +9,7 @@ go.onclick = function() {
 //alert(responseLabel.innerText);
 
   fetch(apiURI, {
-    method: 'GET'
+    method: methodType
   })
   .then(function (response) {
     return response.text();
