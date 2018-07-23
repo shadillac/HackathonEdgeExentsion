@@ -1,0 +1,13 @@
+body{
+	padding: 5px;
+	margin: 5px;
+	overflow: hidden;
+}
+
+.title{
+	font-family: Courier New, Courier, monospace;
+	width:240px; 
+	white-space:nowrap; 
+	overflow:hidden; 
+	text-overflow:ellipsis;
+}
