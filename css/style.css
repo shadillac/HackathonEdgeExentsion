@@ -8,6 +8,10 @@ input{
 	width: 275px;
 }
 
+select{
+	width: 275px;
+}
+
 .title{
 	font-family: Courier New, Courier, monospace;
 	width:240px; 
