@@ -30,9 +30,9 @@ goButton.onclick = function () {
           return waitingForResponse;
         })
         .then(function (text) {
-          JSON.parse(text, function(var1, var2) {
-            if (var1) {
-              let line = var1 + " : " + var2;
+          JSON.parse(text, function(keyVar, valueVar) {
+            if (keyVar) {
+              let line = "<span style=font-weight:bold;>" + keyVar + "</span> : " + valueVar;
               console.log(line);
               responseLabel.innerHTML += "<div><marquee>" + line + "</marquee></div>";
             }
