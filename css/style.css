@@ -31,3 +31,11 @@ p {
     font-size: .8em;
     margin-bottom: 10px;  
 }
+
+.error {
+	color: red;
+}
+
+.success {
+	color: green;
+}
