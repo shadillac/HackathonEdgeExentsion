@@ -1,18 +1,20 @@
 // get the button by id
-let go = document.getElementById('goButton');
+let goButton = document.getElementById('goButton');
 let responseLabel = document.getElementById('responseLabel');
 let responseCodeLabel = document.getElementById('responseCode');
 
 // On the click event of the button go out to a url and do a get.
-go.onclick = function () {
+goButton.onclick = function () {
   responseLabel.innerHTML = "";
   responseCodeLabel.innerHTML = "";
+  
   let responseClass = "success";
+  let responseCode = "0";
+
   let apiURI = document.getElementById('apiUri').value;
   let methodType = document.getElementById('methodBox').value;
   let contentType = document.getElementById('contentTypeBox').value;
   let bodyText = document.getElementById('bodyBox').value;
-  let responseCode = "0";
 
   switch (methodType) {
     case 'GET':
@@ -28,7 +30,13 @@ go.onclick = function () {
           return waitingForResponse;
         })
         .then(function (text) {
-          responseLabel.innerText = text;
+          JSON.parse(text, function(var1, var2) {
+            if (var1) {
+              let line = var1 + " : " + var2;
+              console.log(line);
+              responseLabel.innerHTML += "<div><marquee>" + line + "</marquee></div>";
+            }
+          })
           responseCode = "<span class='" + responseClass + "'>" + responseCode + "</span>"
           responseCodeLabel.innerHTML = responseCode;
         })
