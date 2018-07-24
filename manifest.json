@@ -1,21 +1,27 @@
 {
-    "name": "The Resting Edge",
-    "author": "The Resting Edge",
-    "version": "0.2",
-    "description": "An Edge Extension to test REST API",
-    "permissions": [
-      "tabs"
-    ], 
-    "browser_action": {
-      "default_icon": {
-        "20": "icons/EDGE-Icon-02.png",
-        "40": "icons/EDGE-Icon-02.png"
-      },
-      "default_title": "The Resting Edge",
-      "default_popup": "popup.html"
+  "name": "The Resting Edge",
+  "author": "The Resting Edge",
+  "version": "0.2",
+  "description": "An Edge Extension to test REST API",
+  "permissions": [
+    "tabs"
+  ],
+  "browser_action": {
+    "default_icon": {
+      "20": "icons/EDGE-Icon-02.png",
+      "40": "icons/EDGE-Icon-02.png"
     },
-    "icons": {
-        "25": "icons/EDGE-Icon-01.png",
-        "48": "icons/EDGE-Icon-01.png"
-      }
+    "default_title": "The Resting Edge",
+    "default_popup": "popup.html"
+  },
+  "icons": {
+    "25": "icons/EDGE-Icon-01.png",
+    "48": "icons/EDGE-Icon-01.png"
+  },
+  "background": {
+    "scripts": [
+      "js/background.js"
+    ],
+    "persistent": true
   }
+}
