@@ -14,21 +14,28 @@ go.onclick = function () {
   switch (methodType) {
     case 'GET':
       fetch(apiURI, {
-        method: methodType,
+        method: "GET",
       })
         .then(function (response) {
-          return response;
+          let waitingForResponse = response.text()
+          responseCode = response.status;
+          if (!response.ok) {
+            responseClass = "error";
+          }
+          return waitingForResponse;
         })
-        .then(function (response) {
-          responseLabel.innerText = response.text();
-          responseCode = response.statusCode;
-          console.log(response)
+        .then(function (text) {
+          responseLabel.innerText = text;
+          responseCode = "<span class='" + responseClass + "'>" + responseCode + "</span>"
+          document.getElementById('responseCode').innerHTML = responseCode;
         })
         .catch(function (error) {
+          console.error(error);
           responseClass = "error";
           responseLabel.innerText = error;
-          responseCode = error.statusCode;
-          console.error(error);
+          alert(responseClass);
+          responseCode = "<span class='" + responseClass + "'>" + responseCode + "</span>"
+          document.getElementById('responseCode').innerHTML = responseCode;
         });
       break;
     case 'POST':
@@ -42,24 +49,24 @@ go.onclick = function () {
         //cache: "no-cache", // *default, no-cache, reload, force-cache, only-if-cached
       })  
       .then(function (response) {
-        return response;
+        let waitingForResponse = response.text()
+        responseCode = response.status;
+        return waitingForResponse;
       })
       .then(function (response) {
-        responseLabel.innerText = response.text();
-        responseCode = response.statusCode;
-        console.log(response)
+        responseLabel.innerText = text;
+        responseCode = "<span class='" + responseClass + "'>" + responseCode + "</span>"
+        document.getElementById('responseCode').innerHTML = responseCode;
       })
       .catch(function (error) {
+        console.error(error);
         responseClass = "error";
         responseLabel.innerText = error;
-        responseCode = error.statusCode;
-        console.error(error);
+        responseCode = "<span class='" + responseClass + "'>" + responseCode + "</span>"
+        document.getElementById('responseCode').innerHTML = responseCode;
       });
       break;
     default:
       responseLabel.innerText = methodType + " not yet handled";
   }
-
-  responseCode = "<span class='" + responseClass + "'>" + responseCode + "</span>"
-  document.getElementById('responseCode').innerHTML = responseCode;
 };
