@@ -12,6 +12,10 @@ select{
 	width: 279px;
 }
 
+textarea{
+	width: 400px;
+	height: 200px;
+}
 .title{
 	font-family: Courier New, Courier, monospace;
 	width:240px; 
