@@ -1,9 +1,12 @@
 // get the button by id
 let go = document.getElementById('goButton');
 let responseLabel = document.getElementById('responseLabel');
+let responseCodeLabel = document.getElementById('responseCode');
 
 // On the click event of the button go out to a url and do a get.
 go.onclick = function () {
+  responseLabel.innerHTML = "";
+  responseCodeLabel.innerHTML = "";
   let responseClass = "success";
   let apiURI = document.getElementById('apiUri').value;
   let methodType = document.getElementById('methodBox').value;
@@ -27,7 +30,7 @@ go.onclick = function () {
         .then(function (text) {
           responseLabel.innerText = text;
           responseCode = "<span class='" + responseClass + "'>" + responseCode + "</span>"
-          document.getElementById('responseCode').innerHTML = responseCode;
+          responseCodeLabel.innerHTML = responseCode;
         })
         .catch(function (error) {
           console.error(error);
@@ -35,7 +38,7 @@ go.onclick = function () {
           responseLabel.innerText = error;
           alert(responseClass);
           responseCode = "<span class='" + responseClass + "'>" + responseCode + "</span>"
-          document.getElementById('responseCode').innerHTML = responseCode;
+          responseCodeLabel.innerHTML = responseCode;
         });
       break;
     case 'POST':
@@ -56,14 +59,14 @@ go.onclick = function () {
       .then(function (response) {
         responseLabel.innerText = text;
         responseCode = "<span class='" + responseClass + "'>" + responseCode + "</span>"
-        document.getElementById('responseCode').innerHTML = responseCode;
+        responseCodeLabel.innerHTML = responseCode;
       })
       .catch(function (error) {
         console.error(error);
         responseClass = "error";
         responseLabel.innerText = error;
         responseCode = "<span class='" + responseClass + "'>" + responseCode + "</span>"
-        document.getElementById('responseCode').innerHTML = responseCode;
+        responseCodeLabel.innerHTML = responseCode;
       });
       break;
     default:
