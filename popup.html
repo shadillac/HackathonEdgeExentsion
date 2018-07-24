@@ -14,14 +14,23 @@
         </tr>
         <tr>
           <td><label style="font-weight: bold;">Method</label></td>
-          <td><input type="text" id="methodBox" value="GET"></label></td>
+          <td>
+            <select id="methodBox">
+              <option value="GET">GET</option>
+              <option value="POST">POST</option>
+            </select>
+          </td>
         </tr>
         <tr>
           <td colspan="2" style="text-align: center"><h2><label>Headers</label></h2></td>
         </tr>
         <tr>
             <td><label style="font-weight: bold;">Content-Type</label></td>
-            <td><input type="text" id="contentTypeBox" value="application/json"></label></td>
+            <td>
+                <select id="contentTypeBox">
+                    <option value="application/json">application/json</option>
+                  </select>
+            </td>
         </tr>
         <tr>
             <td><label style="font-weight: bold;">Body</label></td>
