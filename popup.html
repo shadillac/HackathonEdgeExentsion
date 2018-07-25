@@ -1,19 +1,28 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <link rel="stylesheet" type="text/css" href="css/style.css" />
-  </head>
-  <body>
+
+<head>
+  <link rel="stylesheet" type="text/css" href="css/style.css" />
+</head>
+
+<body>
+  <div id='bodyDiv'>
     <img src="icons/EDGE-MainLogo-01-cropped.png" alt="The Resting Edge" height="50" width="200">
     <div>
       <h3>Request</h3>
       <table>
         <tr>
-          <td><label style="font-weight: bold;">URL</label></td>
-          <td><input type="text" id="apiUri" value="https://random.dog/woof.json"></td>
+          <td>
+            <label style="font-weight: bold;">URL</label>
+          </td>
+          <td>
+            <input type="text" id="apiUri" value="https://random.dog/woof.json">
+          </td>
         </tr>
         <tr>
-          <td><label style="font-weight: bold;">Method</label></td>
+          <td>
+            <label style="font-weight: bold;">Method</label>
+          </td>
           <td>
             <select id="methodBox">
               <option value="GET">GET</option>
@@ -22,19 +31,30 @@
           </td>
         </tr>
         <tr>
-          <td><h3><label>Headers</label></h3></td>
+          <td>
+            <h3>
+              <label>Headers</label>
+            </h3>
+          </td>
         </tr>
         <tr>
-            <td><label style="font-weight: bold;">Content-Type</label></td>
-            <td>
-                <select id="contentTypeBox">
-                    <option value="application/json">application/json</option>
-                  </select>
-            </td>
+          <td>
+            <label style="font-weight: bold;">Content-Type</label>
+          </td>
+          <td>
+            <select id="contentTypeBox">
+              <option value="application/json">application/json</option>
+            </select>
+          </td>
         </tr>
         <tr>
-            <td><label style="font-weight: bold;">Body</label></td>
-            <td><input type="text" id="bodyBox" ></label></td>
+          <td>
+            <label style="font-weight: bold;">Body</label>
+          </td>
+          <td>
+            <input type="text" id="bodyBox">
+            </label>
+          </td>
         </tr>
       </table>
       <br/>
@@ -48,18 +68,29 @@
       <h3>Response</h3>
       <table>
         <tr>
-          <td><label>Response Code:</label></td>
-          <td><label id="responseCode"></label></div></td>
-        </tr>
-        <tr>
-          <td style="vertical-align: 0%"><label>Response Message:</label></td>
-          <td><label id="responseLabel"></label></td>
-        </tr>
-      </table>
+          <td>
+            <label>Response Code:</label>
+          </td>
+          <td>
+            <label id="responseCode"></label>
     </div>
-    <script src="js/popup.js"></script>
+    </td>
+    </tr>
+    <tr>
+      <td style="vertical-align: 0%">
+        <label>Response Message:</label>
+      </td>
+      <td>
+        <label id="responseLabel"></label>
+      </td>
+    </tr>
+    </table>
+  </div>
+  <script src="js/popup.js"></script>
   <p></p>
   <p></p>
   <p></p>
-  </body>
+  </div>
+</body>
+
 </html>

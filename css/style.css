@@ -40,6 +40,10 @@ p {
     margin-bottom: 10px;  
 }
 
+#bodyDiv{
+	overflow: scroll;
+}
+
 .error {
 	color: red;
 }
