@@ -6,7 +6,7 @@ function writeError(error, responseCode) {
   responseCodeLabel.innerHTML = responseCode;
 }
 
-// get the button by id
+// get the page controls by id
 let goButton = document.getElementById('goButton');
 let responseLabel = document.getElementById('responseLabel');
 let responseCodeLabel = document.getElementById('responseCode');

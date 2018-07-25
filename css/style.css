@@ -1,7 +1,8 @@
 body{
 	padding: 5px;
 	margin: 5px;
-	overflow: hidden;
+	/* font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif; */
+	/* overflow: auto; */
 }
 
 input{
@@ -13,27 +14,36 @@ select{
 }
 
 #responseLabel{
-	width: 400px;
-	height: 200px;
+	width: auto;
+	height: auto;
 }
+
+#responseCode{
+	font-size: 26pt;
+	font-weight: bold;
+}
+
 .title{
-	font-family: Courier New, Courier, monospace;
+	/* font-family: Courier New, Courier, monospace;
 	width:240px; 
 	white-space:nowrap; 
 	overflow:hidden; 
-	text-overflow:ellipsis;
+	text-overflow:ellipsis; */
 }
 
 /* main styles */
 * {
-    font-family: 'Segoe UI';
+	font-family: 'Segoe UI';
 }
 
 h1 {
     font-weight: 400;
-    font-size: 20px;
+    font-size: 21px;
 }
-
+h2 {
+	font-weight: 600;
+	font-size: 16px;
+}
 p {
     font-weight: 500;
     font-size: .8em;
@@ -42,7 +52,7 @@ p {
 
 #bodyDiv{
 	overflow: auto;
-	padding-bottom: 10pt;
+	padding-bottom: 20pt;
 }
 
 #goButton {
