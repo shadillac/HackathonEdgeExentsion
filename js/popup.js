@@ -41,13 +41,14 @@ goButton.onclick = function () {
           JSON.parse(text, function (keyVar, valueVar) {
             if (keyVar && valueVar) {
               // identify if URL and wrap it in an anchor
-              if (valueVar.startsWith('http')) {
-                valueVar = "<a href='" + valueVar + "'>" + valueVar + "</a>";
-              }
-              let line = "<span style=font-weight:bold;>" + keyVar + "</span> : " + valueVar;
-              console.log(line);
-              //responseLabel.innerHTML += "<div><marquee>" + line + "</marquee></div>";
-              responseLabel.innerHTML += "<div>" + line + "</div>";
+              try {
+                if (valueVar.startsWith('http')) {
+                  valueVar = "<a href='" + valueVar + "'>" + valueVar + "</a>";
+                }
+                let line = "<span style=font-weight:bold;>" + keyVar + "</span> : " + valueVar;
+                //responseLabel.innerHTML += "<div><marquee>" + line + "</marquee></div>";
+                responseLabel.innerHTML += "<div>" + line + "</div>";
+              } catch(err) { console.error(err);  }
             }
           })
           responseCode = "<span class='" + responseClass + "'>" + responseCode + "</span>"

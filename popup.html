@@ -9,7 +9,7 @@
   <div id='bodyDiv'>
     <img src="icons/EDGE-MainLogo-01-cropped.png" alt="The Resting Edge" height="50" width="200">
     <div>
-      <h3>Request</h3>
+      <h1>Request</h1>
       <table>
         <tr>
           <td>
@@ -32,9 +32,9 @@
         </tr>
         <tr>
           <td>
-            <h3>
+            <h1>
               <label>Headers</label>
-            </h3>
+            </h1>
           </td>
         </tr>
         <tr>
@@ -53,19 +53,14 @@
           </td>
           <td>
             <input type="text" id="bodyBox">
-            </label>
           </td>
         </tr>
       </table>
       <br/>
-      <button id="goButton" style="border:1pt solid black; 
-      background-color: #1976d2; 
-      color: whitesmoke;
-      font-weight: bold;
-      padding:10pt;">Send Request</button>
+      <button id="goButton">Send Request</button>
     </div>
     <div>
-      <h3>Response</h3>
+      <h1>Response</h1>
       <table>
         <tr>
           <td>
@@ -73,24 +68,21 @@
           </td>
           <td>
             <label id="responseCode"></label>
+
+          </td>
+        </tr>
+        <tr>
+          <td style="vertical-align: 0%">
+            <label>Response Message:</label>
+          </td>
+          <td>
+            <label id="responseLabel"></label>
+          </td>
+        </tr>
+      </table>
     </div>
-    </td>
-    </tr>
-    <tr>
-      <td style="vertical-align: 0%">
-        <label>Response Message:</label>
-      </td>
-      <td>
-        <label id="responseLabel"></label>
-      </td>
-    </tr>
-    </table>
   </div>
   <script src="js/popup.js"></script>
-  <p></p>
-  <p></p>
-  <p></p>
-  </div>
 </body>
 
 </html>
